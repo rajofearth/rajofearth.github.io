@@ -34,3 +34,20 @@ a:hover{
     color: rgb(132, 195, 255);
     text-decoration: dashed;
 }
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 600px) {
+    .face {
+        padding: 50px; /* Adjust padding for smaller screens */
+        padding-top: 30vh;
+    }
+  
+    .title {
+        font-size: 28px; /* Decrease font size for smaller screens */
+    }
+    .face p{
+        font-size: 12px;
+    }
+    .face nav a {
+        font-size: 12px; /* Decrease font size for smaller screens */
+    }
+  }

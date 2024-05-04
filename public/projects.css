@@ -24,9 +24,26 @@ body {
     padding-left: 60px;
     padding-top: 20px;
 }
-:root {
-    --svc-text-primary: #ffffff;
-    --svc-text-link: #0366d6;
-    --svc-background: #000000;
-    --svc-border-color: #e1e4e8;
+.back-btn{
+    color: blue;
+    text-decoration: none;
+}
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 600px) {
+    .title{
+        font-size: 22px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .sub-title{
+        padding-left:8px;
+        font-size: 16px;
+    }
+    .repo-card{
+        max-width:fit-content;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    
   }
