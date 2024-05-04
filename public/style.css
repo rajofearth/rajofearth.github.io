@@ -1,15 +1,18 @@
+html{
+    border: 1px solid white;
+    height: 96%;
+    margin: 10px;
+}
 body {
     background-color: black;
     color: white;
     font-family: monospace;
-    border: 1px solid white;
-    padding: 60px;
 }
 
 .face {
     display: grid;
     place-items: center;
-    padding-top: 180px;
+    padding: 180px;
 }
 .title {
     font-size: 32px;
@@ -30,7 +33,4 @@ a:active{
 a:hover{
     color: rgb(132, 195, 255);
     text-decoration: dashed;
-}
-.face nav{
-    padding-bottom: 180px;
 }
