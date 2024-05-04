@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    border: 1px solid white;
+    padding-left: 20px;
+}
+.title{
+    font-size: 18px;
+}
+
+.sub-title{
+    padding-left:10px;
+    font-size: 14px;
+}
