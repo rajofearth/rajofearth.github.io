@@ -1,49 +1,48 @@
-html{
-    border: 1px solid white;
-    height: 96%;
-    margin: 10px;
+html {
+  border: 1px solid white;
+  height: 96%;
+  margin: 10px;
 }
 body {
-    background-color: black;
-    color: white;
-    font-family: monospace;
+  background-color: black;
+  color: white;
+  font-family: CaskaydiaCove Nerd Font Mono;
 }
 
-.title{
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
+.title {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
 }
 
-.sub-title{
-    padding-left:10px;
-    font-size: 14px;
+.sub-title {
+  padding-left: 10px;
+  font-size: 14px;
 }
-.repo-card{
-    max-width: 420px;
-    padding-left: 60px;
-    padding-top: 20px;
+.repo-card {
+  max-width: 420px;
+  padding-left: 60px;
+  padding-top: 20px;
 }
-.back-btn{
-    color: blue;
-    text-decoration: none;
+.back-btn {
+  color: blue;
+  text-decoration: none;
 }
 /* Use a media query to add a breakpoint at 800px: */
 @media screen and (max-width: 600px) {
-    .title{
-        font-size: 22px;
-        text-decoration: none;
-        color: white;
-    }
-    
-    .sub-title{
-        padding-left:8px;
-        font-size: 16px;
-    }
-    .repo-card{
-        max-width:fit-content;
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-    
+  .title {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
   }
+
+  .sub-title {
+    padding-left: 8px;
+    font-size: 16px;
+  }
+  .repo-card {
+    max-width: fit-content;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
