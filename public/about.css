@@ -23,3 +23,57 @@ body {
   font-size: 14px;
   padding-left: 20px;
 }
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px; /* Adjust based on your preference */
+  margin: auto; /* Centers the .about container */
+  padding: 20px; /* Optional: add some padding */
+}
+
+@media (min-width: 600px) {
+  .about {
+    flex-direction: row;
+    text-align: left;
+  }
+  .about .text-container {
+    align-items: flex-start;
+  }
+}
+
+.about img {
+  width: 200px;
+  margin-bottom: 20px; /* Space below the image for small screens */
+  border-radius: 20px;
+}
+
+.about .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; /* or any width that suits your design */
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  .about .text-container {
+    align-items: flex-start;
+  }
+  .about img {
+    margin-right: 20px; /* Space to the right of the image for larger screens */
+    margin-bottom: 0; /* Remove bottom margin for larger screens */
+    border-radius: 10px;
+  }
+}
+
+.about h4 {
+  margin: 0;
+  font-size: larger;
+}
+
+.about p {
+  margin: 5px 0 0 0;
+}
