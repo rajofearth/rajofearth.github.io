@@ -42,12 +42,13 @@ body {
   .about .text-container {
     align-items: flex-start;
   }
-}
-
-.about img {
-  width: 200px;
-  margin-bottom: 20px; /* Space below the image for small screens */
-  border-radius: 20px;
+  .about img {
+    margin-right: 20px; /* Space to the right of the image for larger screens */
+    margin-bottom: 0; /* Remove bottom margin for larger screens */
+    width: 200px;
+    margin-bottom: 20px; /* Space below the image for small screens */
+    border-radius: 20px;
+  }
 }
 
 .about .text-container {
@@ -56,17 +57,6 @@ body {
   align-items: center;
   max-width: 600px; /* or any width that suits your design */
   margin: auto;
-}
-
-@media (min-width: 600px) {
-  .about .text-container {
-    align-items: flex-start;
-  }
-  .about img {
-    margin-right: 20px; /* Space to the right of the image for larger screens */
-    margin-bottom: 0; /* Remove bottom margin for larger screens */
-    border-radius: 10px;
-  }
 }
 
 .about h4 {
