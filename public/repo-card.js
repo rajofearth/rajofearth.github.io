@@ -25,12 +25,13 @@ window.tarptaeya.reloadRepoCards = async function() {
       linkColor: '#0366d6',
     },
     'dark-theme': {
-      background: 'black',
-      borderColor: 'white',
-      color: 'white',
-      linkColor: 'rgb(88, 166, 255)',
+      background: '#001',
+      borderColor: '#0f0',
+      color: '#0f0',
+      linkColor: 'text-shadow: 0 0 10px #0f0; color: #0f0; text-decoration: none;',
     }
   };
+  
 
   for (const el of document.querySelectorAll('.repo-card')) {
     const name = el.getAttribute('data-repo');

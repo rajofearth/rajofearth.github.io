@@ -1,53 +1,74 @@
-html {
-  border: 1px solid white;
-  height: 96%;
-  margin: 10px;
+body { 
+  font-family: 'Courier New', monospace;
+  background-color: #001; 
+  color: #0f0;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
 }
-body {
-  background-color: black;
-  color: white;
-  font-family: CaskaydiaCove Nerd Font Mono;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
-
+h1 { 
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 0 0 10px #0f0;
+}
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+  margin: 50px auto;
+}
 .face {
-  display: grid;
-  place-items: center;
-  padding: 180px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0,255,0,0.1);
+  border: 1px solid #0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
-.title {
-  font-size: 32px;
-  font-family: monospace;
+.front  { transform: rotateY(0deg) translateZ(50px); }
+.right  { transform: rotateY(90deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX(90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+@keyframes rotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
 }
-.face nav a {
-  font-size: 12px;
+a {
+  color: #0f0;
   text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-  color: blue;
-}
-a:active {
-  color: blue;
-  text-decoration: none;
+  border-bottom: 1px dashed #0f0;
 }
 a:hover {
-  color: rgb(132, 195, 255);
-  text-decoration: dashed;
+  text-shadow: 0 0 5px #0f0;
 }
-/* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 600px) {
-  .face {
-    padding: 50px; /* Adjust padding for smaller screens */
-    padding-top: 30vh;
-  }
-
-  .title {
-    font-size: 28px; /* Decrease font size for smaller screens */
-  }
-  .face p {
-    font-size: 12px;
-  }
-  .face nav a {
-    font-size: 12px; /* Decrease font size for smaller screens */
-  }
+.input-container {
+  text-align: center;
+  margin-top: 30px;
+}
+input[type="text"] {
+  background: #001;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px;
+  width: 70%;
+  font-family: 'Courier New', monospace;
+}
+button {
+  background: #0f0;
+  color: #001;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
 }
