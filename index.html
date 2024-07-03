@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta Tags -->
     <title>Yxa Rex - A Personal Website Of YR</title>
-    <meta name="title" content="Yxa Rex - A Personal Website Of YR" />
+    <meta name="title" content="Yashraj Maher's Personal Website" />
     <meta
       name="description"
       content="Yashraj Maher's Personal Website a.k.a Yxa Rex's website which showcases Yashraj Maher's Projects and Interests."
@@ -14,7 +14,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rajofearth.github.io/" />
-    <meta property="og:title" content="Yxa Rex - A Personal Website Of YR" />
+    <meta property="og:title" content="Yashraj Maher's Personal Website" />
     <meta
       property="og:description"
       content="Yashraj Maher's Personal Website a.k.a Yxa Rex's website which showcases Yashraj Maher's Projects and Interests."
@@ -29,7 +29,7 @@
     <meta property="twitter:url" content="https://rajofearth.github.io/" />
     <meta
       property="twitter:title"
-      content="Yxa Rex - A Personal Website Of YR"
+      content="Yashraj Maher's Personal Website"
     />
     <meta
       property="twitter:description"
@@ -51,16 +51,113 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="public/css/style.css" />
-  </head>
-  <body>
-    <div class="face">
-      <a class="title"> Yxa Rex </a>
-      <p>Hello I am Yxa Rex, from planet earth.</p>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="public/projects.html">Projects</a>
-        <a href="public/about.html">About</a>
-      </nav>
-    </div>
-  </body>
+<base href="https://rajofearth.github.io/">
+<style>
+body { 
+  font-family: 'Courier New', monospace;
+  background-color: #001; 
+  color: #0f0;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 { 
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 0 0 10px #0f0;
+}
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+  margin: 50px auto;
+}
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0,255,0,0.1);
+  border: 1px solid #0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.front  { transform: rotateY(0deg) translateZ(50px); }
+.right  { transform: rotateY(90deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX(90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+@keyframes rotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+a {
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dashed #0f0;
+}
+a:hover {
+  text-shadow: 0 0 5px #0f0;
+}
+.input-container {
+  text-align: center;
+  margin-top: 30px;
+}
+input[type="text"] {
+  background: #001;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px;
+  width: 70%;
+  font-family: 'Courier New', monospace;
+}
+button {
+  background: #0f0;
+  color: #001;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Yashraj Maher a.k.a Yxa Rex</h1>
+  
+  <div class="cube">
+    <div class="face front">YR</div>
+    <div class="face back">Projects</div>
+    <div class="face right">About</div>
+    <div class="face left">∞</div>
+    <div class="face top">⚡</div>
+    <div class="face bottom">🌐</div>
+  </div>
+  
+  <p>Welcome to my personal website! I'm Yashraj Maher, also known as Yxa Rex. Here, I explore the boundaries of science, space, and deep conversations. This site is a portal into my world, where knowledge and curiosity collide.</p>
+  
+  <p>Check out my projects on <a href="https://github.com/rajofearth">GitHub</a> and visit my <a href="https://rajofearth.github.io/public/projects.html">Projects</a> page for more insights and updates on my latest endeavors. Learn more about me on the <a href="https://rajofearth.github.io/public/about.html">About</a> page.</p>
+  
+  <p>Stay updated with my latest thoughts and musings by following my blog:</p>
+  
+  <div class="input-container">
+    <form action="https://rajofearth.github.io/public/blog.html" method="GET">
+      <input type="text" name="url" placeholder="Enter your email to subscribe">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  
+  <p>In my universe, even the most complex ideas can become reality. From exploring new technologies to diving deep into scientific discussions, there's always something new to discover.</p>
+  
+  <p>Start your journey into the uncharted territories of my mind and explore the web. What will you learn today?</p>
+</div>
+</body>
 </html>
