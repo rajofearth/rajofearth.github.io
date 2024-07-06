@@ -91,7 +91,20 @@ button {
   font-family: 'Courier New', monospace;
   margin-top: 10px;
 }
-
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+nav a{
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dashed #0f0;
+}
+nav a:hover{
+  text-shadow: 0 0 5px #0f0;
+}
 @media screen and (max-width: 600px) {
   body {
     font-size: 14px;

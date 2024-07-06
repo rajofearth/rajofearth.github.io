@@ -2,6 +2,7 @@
 layout: post
 title: "Markdown Guide: The Basics and Beyond"
 date: 2024-07-05
+description: "Welcome to my new blog! Here, I’ll be sharing my thoughts on science, space, and technology."
 categories: general
 ---
 

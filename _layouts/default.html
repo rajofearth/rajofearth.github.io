@@ -4,13 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
+        <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta
+      property="og:description"
+      content="{{page.description}}"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    <meta
+      property="twitter:title"
+      content="{{page.description}}"
+    />
+    <meta
+      property="twitter:description"
+      content="{{page.description}}"
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="manifest" href="/public/img/site.webmanifest">
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
     <div class="container">
-        <nav>
+        <nav style="justify-content: center;">
             <a href="/">Home</a>
             <a href="/blog/">Blog</a>
+            <a href="/projects/">Projects</a>
+            <a href="/about/">About</a>
             <!-- Add other navigation links as needed -->
         </nav>
         {{ content }}
