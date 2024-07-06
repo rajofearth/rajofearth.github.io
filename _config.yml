@@ -1,0 +1,21 @@
+title: Yxa Rex - A Personal Website Of YR
+description: Yashraj Maher's Personal Website a.k.a Yxa Rex's website which showcases Yashraj Maher's Projects and Interests.
+url: https://rajofearth.github.io
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Permalink structure for blog posts
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
