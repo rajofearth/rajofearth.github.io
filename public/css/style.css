@@ -105,6 +105,150 @@ nav a{
 nav a:hover{
   text-shadow: 0 0 5px #0f0;
 }
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+/* Updated styles for post list */
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 30px;
+  border: 1px dotted #0f0;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-item.has-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.post-item.has-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 17, 0, 0.7); /* Dark green overlay */
+  z-index: 1;
+}
+
+.post-content {
+  position: relative;
+  z-index: 2;
+}
+
+.post-link {
+  font-size: 24px;
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dotted #0f0;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #0a0;
+  margin-bottom: 15px;
+}
+/* Updated styles for post meta information */
+
+.post-date {
+  margin-right: 10px;
+}
+
+.post-categories {
+  display: inline-block;
+}
+
+.post-categories a {
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dotted #0f0;
+}
+
+.post-categories a:hover {
+  text-shadow: 0 0 5px #0f0;
+}
+
+/* Styles for individual post page */
+.post-title {
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  line-height: 1.6;
+}
+/* Styles for categories page */
+.categories-list h2 {
+  color: #0f0;
+  margin-top: 30px;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.categories-list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.categories-list ul li {
+  margin-bottom: 15px;
+}
+
+.categories-list ul li a {
+  color: #0a0;
+  text-decoration: none;
+  border-bottom: 1px dotted #0a0;
+  font-size: 18px;
+}
+
+.categories-list ul li a:hover {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.categories-list ul li small {
+  color: #070;
+  margin-left: 10px;
+}
+.pagination a,
+.pagination span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: 1px solid #0f0;
+  color: #0f0;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.pagination a:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.pagination .current-page {
+  background-color: #0f0;
+  color: #001;
+}
+
+.pagination .disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .ellipsis {
+  border: none;
+  padding: 5px;
+}
 @media screen and (max-width: 600px) {
   body {
     font-size: 14px;

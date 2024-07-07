@@ -23,6 +23,7 @@ This is my personal website where I showcase my projects, share my thoughts thro
 - HTML
 - CSS
 - JavaScript
+- Jekyll Static Site Generator
 - Mailchimp Services
 
 ## Usage
@@ -35,6 +36,5 @@ This project is licensed under a custom license. All rights reserved. Unauthoriz
 You can reach me through [GitHub](https://github.com/rajofearth) or [Instagram](instagram.com/yashraj.maher).
 
 Thank you for visiting my website!
-```
 
 This README makes it clear that your content should not be copied or used without permission. Let me know if there's anything else you'd like to add or change!

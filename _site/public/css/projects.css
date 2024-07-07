@@ -24,6 +24,7 @@ body {
 .sub-title {
   font-size: 1.6em;
   text-align: center;
+  margin-top:-5px;
   margin-bottom: 10px;
 }
 
@@ -54,12 +55,13 @@ nav {
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: -25px;
   margin-bottom: 10px;
 }
 nav a{
   color: #0f0;
   text-decoration: none;
+  font-size: 0.9em;
   border-bottom: 1px dashed #0f0;
 }
 nav a:hover{
@@ -145,7 +147,9 @@ nav a:hover{
   .back-btn {
     font-size: 14px;
   }
-
+  nav a{
+  font-size: 0.8em;
+  }
   .social-icons {
     gap: 5px;
   }
@@ -153,5 +157,6 @@ nav a:hover{
   .social-icons a {
     width: 16px;
     height: 16px;
+    font-size: 0.9em;
   }
 }
