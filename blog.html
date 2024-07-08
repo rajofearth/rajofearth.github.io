@@ -179,3 +179,84 @@ title: Blog
   searchResults.insertBefore(returnButton, searchResults.firstChild);
 });
 </script>
+{% assign posts_per_page = 6 %}
+{% assign total_posts = site.posts | size %}
+{% assign total_pages = total_posts | divided_by: posts_per_page | ceil %}
+{% assign current_page = page.pagination_info.curr_page | default: 1 | plus: 0 %}
+{% assign offset = posts_per_page | times: current_page | minus: posts_per_page %}
+
+<ul class="post-list">
+  {% assign page_posts = site.posts | slice: offset, posts_per_page %}
+  {% for post in page_posts %}
+    <li class="post-item {% if post.image %}has-image{% endif %}" {% if post.image %}style="background-image: url('{{ post.image }}');"{% endif %}>
+      <div class="post-content">
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          {% if post.categories.size > 0 %}
+            <span class="post-categories">
+              | Categories:
+              {% for category in post.categories %}
+              <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+        <p>{{ post.excerpt }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<!-- Pagination code remains the same -->
+<div class="pagination">
+  {% if current_page > 1 %}
+    <a href="{{ site.baseurl }}/blog{% if current_page > 2 %}/page{{ current_page | minus: 1 }}{% endif %}" class="prev">&lt;</a>
+  {% else %}
+    <span class="prev disabled">&lt;</span>
+  {% endif %}
+
+  <a href="{{ site.baseurl }}/blog" {% if current_page == 1 %}class="current-page"{% endif %}>1</a>
+
+  {% if total_pages > 1 %}
+    {% assign total_pages_minus_2 = total_pages | minus: 2 %}
+    {% if current_page > 3 %}
+      <span class="ellipsis">...</span>
+    {% endif %}
+
+    {% assign page_start = current_page | minus: 1 %}
+    {% assign page_end = current_page | plus: 1 %}
+    
+    {% if page_start < 2 %}
+      {% assign page_start = 2 %}
+      {% assign page_end = page_start | plus: 2 %}
+    {% endif %}
+    
+    {% if page_end >= total_pages %}
+      {% assign page_end = total_pages | minus: 1 %}
+      {% assign page_start = page_end | minus: 2 %}
+    {% endif %}
+    
+    {% for page in (page_start..page_end) %}
+      {% if page > 1 and page < total_pages %}
+        <a href="{{ site.baseurl }}/blog/page{{ page }}" {% if page == current_page %}class="current-page"{% endif %}>{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if current_page < total_pages_minus_2 %}
+      <span class="ellipsis">...</span>
+    {% endif %}
+
+    {% if total_pages > 1 %}
+      <a href="{{ site.baseurl }}/blog/page{{ total_pages }}" {% if current_page == total_pages %}class="current-page"{% endif %}>{{ total_pages }}</a>
+    {% endif %}
+  {% endif %}
+
+  {% if current_page < total_pages %}
+    <a href="{{ site.baseurl }}/blog/page{{ current_page | plus: 1 }}" class="next">&gt;</a>
+  {% else %}
+    <span class="next disabled">&gt;</span>
+  {% endif %}
+</div>
