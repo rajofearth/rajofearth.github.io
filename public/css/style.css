@@ -188,38 +188,6 @@ nav a:hover{
 .post-content {
   line-height: 1.6;
 }
-/* Styles for categories page */
-.categories-list h2 {
-  color: #0f0;
-  margin-top: 30px;
-  text-shadow: 0 0 5px #0f0;
-}
-
-.categories-list ul {
-  list-style-type: none;
-  padding-left: 20px;
-}
-
-.categories-list ul li {
-  margin-bottom: 15px;
-}
-
-.categories-list ul li a {
-  color: #0a0;
-  text-decoration: none;
-  border-bottom: 1px dotted #0a0;
-  font-size: 18px;
-}
-
-.categories-list ul li a:hover {
-  color: #0f0;
-  text-shadow: 0 0 5px #0f0;
-}
-
-.categories-list ul li small {
-  color: #070;
-  margin-left: 10px;
-}
 .pagination a,
 .pagination span {
   display: inline-block;
