@@ -5,6 +5,7 @@ gem 'jekyll', '~> 3.9.0'
 gem 'jekyll-sass-converter', '~> 1.5.2'
 gem 'liquid', '~> 4.0'
 gem 'kramdown', '~> 2.4.0'
+gem "webrick"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
