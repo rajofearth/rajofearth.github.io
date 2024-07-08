@@ -184,7 +184,33 @@ nav a:hover{
   text-shadow: 0 0 10px #0f0;
   margin-bottom: 10px;
 }
+/* Styles for search feature */
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+#search-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #0f0;
+  background-color: #001;
+  color: #0f0;
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0f0;
+  color: #001;
+  border: none;
+  cursor: pointer;
+}
+
+#search-results {
+  margin-top: 20px;
+}
 .post-content {
   line-height: 1.6;
 }
