@@ -1,6 +1,6 @@
 # Yashraj Maher's Personal Website
 
-Welcome to my personal website repository! This website serves as a hub for my projects, blogs, and more. You can visit the website [here](https://rajofearth.github.io).
+Welcome to my personal website repository! This retro-futuristic website serves as a hub for my projects, blogs, and more. You can visit the website [here](https://rajofearth.github.io).
 
 ## Table of Contents
 - [About](#about)
