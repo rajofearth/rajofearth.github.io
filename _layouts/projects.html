@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+        <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta
+      property="og:description"
+      content="{{ post.excerpt }}"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    <meta
+      property="twitter:title"
+      content="{{ post.excerpt }}"
+    />
+    <meta
+      property="twitter:description"
+      content="{{ post.excerpt }}"
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="manifest" href="/public/img/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/project.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <p class="sub-title">
+      <a href="javascript:history.back()" class="back-btn"><--</a
+      >Projects
+    </p>
+    <div class="container">
+        <nav style="justify-content: center;">
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/about.html">About</a>
+            <!-- Add other navigation links as needed -->
+        </nav>
+        {{ content }}
+    </div>
+</body>
+</html>

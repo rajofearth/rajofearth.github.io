@@ -6,10 +6,16 @@ url: https://rajofearth.github.io
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-get-json
 
 # Permalink structure for blog posts
 permalink: /blog/:year/:month/:day/:title/
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+    
 # Exclude from processing
 exclude:
   - Gemfile

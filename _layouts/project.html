@@ -1,0 +1,17 @@
+---
+layout: projects
+title: project title
+description: 
+tags: 
+permalink: 
+---
+<article class="post">
+    <h2>{{ page.title }}</h2>
+    <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+    <p>{{ page.description }}</p>
+    <p>Tags: {{ page.categories | join: ', ' }}</p>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+  

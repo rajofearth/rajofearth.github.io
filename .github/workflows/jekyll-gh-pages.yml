@@ -24,7 +24,7 @@ jobs:
         run: bundle install
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: python _scripts/fetch_readmes.py && bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
