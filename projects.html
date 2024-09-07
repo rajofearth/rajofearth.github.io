@@ -94,7 +94,17 @@ title: Projects
         performSearch(searchInput.value);
       }
     });
+    // Add a button to return to the main blog content
+  const returnButton = document.createElement('button');
+  returnButton.textContent = 'Return to Blog';
+  returnButton.addEventListener('click', function() {
+    searchResults.style.display = 'none';
+    blogContent.style.display = 'block';
+    searchInput.value = '';
+    searchInput.placeholder = 'Search projects...';
   });
+  searchResults.insertBefore(returnButton, searchResults.firstChild);
+});
 </script>
   </body>
 </html>
