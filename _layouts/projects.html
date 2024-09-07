@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} - {{site.title}}</title>
         <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
@@ -40,18 +40,7 @@
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-    <p class="sub-title">
-      <a href="javascript:history.back()" class="back-btn"><--</a
-      >Projects
-    </p>
-    <div class="container">
-        <nav style="justify-content: center;">
-            <a href="/">Home</a>
-            <a href="/blog/">Blog</a>
-            <a href="/projects.html">Projects</a>
-            <a href="/about.html">About</a>
-            <!-- Add other navigation links as needed -->
-        </nav>
+  <div class="container">
         {{ content }}
     </div>
 </body>

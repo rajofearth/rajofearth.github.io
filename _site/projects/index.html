@@ -1,8 +1,47 @@
----
-layout: projects
-title: Projects
----
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Yxa Rex - A Personal Website Of YR</title>
+        <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:4000/projects/" />
+    <meta property="og:title" content="Projects" />
+    <meta
+      property="og:description"
+      content=""
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://localhost:4000/projects/" />
+    <meta
+      property="twitter:title"
+      content=""
+    />
+    <meta
+      property="twitter:description"
+      content=""
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="manifest" href="/public/img/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/project.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container">
+        <style>
   /* Updated styles for project items and search results */
   .project-item, .search-result-item {
     margin-bottom: 30px;
@@ -102,26 +141,80 @@ title: Projects
 </div>
 
 <div id="project-content" class="projects-container">
-  {% for project in site.projects %}
-    <div class="project-item {% if project.image %}has-image{% endif %}" {% if project.image %}style="background-image: url('{{ project.image }}');"{% endif %}>
+  
+    <div class="project-item " >
       <div class="project-content">
         <h2>
-          <a class="project-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
+          <a class="project-link" href="/projects/audio_file_organizer/">Audio file organizer</a>
         </h2>
         <div class="project-meta">
-          {% if project.tags %}
+          
             <span class="project-tags">
               Tags:
-              {% for tag in project.tags %}
-                <a href="#" class="tag-link" data-tag="{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
+              
+                <a href="#" class="tag-link" data-tag="automation">automation</a>, 
+              
+                <a href="#" class="tag-link" data-tag="music">music</a>, 
+              
+                <a href="#" class="tag-link" data-tag="organizer">organizer</a>, 
+              
+                <a href="#" class="tag-link" data-tag="python">python</a>, 
+              
+                <a href="#" class="tag-link" data-tag="python-script">python-script</a>
+              
             </span>
-          {% endif %}
+          
         </div>
-        <p>{{ project.description }}</p>
+        <p>This repository contains a Python script for organizing audio files by various parameters such as artist, album, and genre, creating a structured directory for your music library.</p>
       </div>
     </div>
-  {% endfor %}
+  
+    <div class="project-item " >
+      <div class="project-content">
+        <h2>
+          <a class="project-link" href="/projects/rajofearth.github.io/">Rajofearth.github.io</a>
+        </h2>
+        <div class="project-meta">
+          
+            <span class="project-tags">
+              Tags:
+              
+                <a href="#" class="tag-link" data-tag="blog">blog</a>, 
+              
+                <a href="#" class="tag-link" data-tag="personal-website">personal-website</a>
+              
+            </span>
+          
+        </div>
+        <p>Yashraj Maher's personal website showcasing my projects, blogs, and more.</p>
+      </div>
+    </div>
+  
+    <div class="project-item " >
+      <div class="project-content">
+        <h2>
+          <a class="project-link" href="/projects/yplayer/">Yplayer</a>
+        </h2>
+        <div class="project-meta">
+          
+            <span class="project-tags">
+              Tags:
+              
+                <a href="#" class="tag-link" data-tag="music">music</a>, 
+              
+                <a href="#" class="tag-link" data-tag="music-player">music-player</a>, 
+              
+                <a href="#" class="tag-link" data-tag="responsive-web-design">responsive-web-design</a>, 
+              
+                <a href="#" class="tag-link" data-tag="webapp">webapp</a>
+              
+            </span>
+          
+        </div>
+        <p>YPlayer is a sleek, responsive web-based music player that lets users effortlessly upload, manage, and enjoy their music files. With features like automatic playback and dynamic album art, it delivers a great experience on both desktop and mobile.</p>
+      </div>
+    </div>
+  
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -133,15 +226,31 @@ title: Projects
   
     // Pre-populate project data
     const projects = [
-      {% for project in site.projects %}
+      
       {
-        title: "{{ project.title | escape }}",
-        url: "{{ project.url | relative_url }}",
-        description: "{{ project.description | escape }}",
-        tags: [{% for tag in project.tags %}"{{ tag | escape }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
-        image: "{{ project.image }}"
-      }{% unless forloop.last %},{% endunless %}
-      {% endfor %}
+        title: "Audio file organizer",
+        url: "/projects/audio_file_organizer/",
+        description: "This repository contains a Python script for organizing audio files by various parameters such as artist, album, and genre, creating a structured directory for your music library.",
+        tags: ["automation","music","organizer","python","python-script"],
+        image: ""
+      },
+      
+      {
+        title: "Rajofearth.github.io",
+        url: "/projects/rajofearth.github.io/",
+        description: "Yashraj Maher&#39;s personal website showcasing my projects, blogs, and more.",
+        tags: ["blog","personal-website"],
+        image: ""
+      },
+      
+      {
+        title: "Yplayer",
+        url: "/projects/yplayer/",
+        description: "YPlayer is a sleek, responsive web-based music player that lets users effortlessly upload, manage, and enjoy their music files. With features like automatic playback and dynamic album art, it delivers a great experience on both desktop and mobile.",
+        tags: ["music","music-player","responsive-web-design","webapp"],
+        image: ""
+      }
+      
     ];
   
     function performSearch(searchTerm) {
@@ -225,3 +334,6 @@ document.querySelectorAll('.copy-btn').forEach(button => {
   });
 });
   </script>
+    </div>
+</body>
+</html>

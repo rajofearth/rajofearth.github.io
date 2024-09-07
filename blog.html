@@ -2,7 +2,21 @@
 layout: default
 title: Blog
 ---
+<style>
+  #return-button {
+  background: #0f0;
+  color: #001;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 20px;
+}
 
+#return-button:hover {
+  text-shadow: 0 0 5px #001;
+}
+</style>
 <h1>Blog</h1>
 
 <div class="search-container">
@@ -102,80 +116,94 @@ title: Blog
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('search-input');
-  const searchButton = document.getElementById('search-button');
-  const searchResults = document.getElementById('search-results');
-  const resultsList = document.getElementById('results-list');
-  const blogContent = document.getElementById('blog-content');
-  const categoryLinks = document.querySelectorAll('.category-link');
-
-  // Function to perform the search
-  function performSearch(searchTerm) {
-    const term = searchTerm.toLowerCase();
-    
-    // Hide the main blog content and show search results
-    blogContent.style.display = 'none';
-    searchResults.style.display = 'block';
-    
-    // Clear previous results
-    resultsList.innerHTML = '';
-    
-    // Perform the search
-    {% for post in site.posts %}
-      const postTitle = "{{ post.title | escape }}".toLowerCase();
-      const postCategories = [
-        {% for category in post.categories %}
-          "{{ category | escape }}".toLowerCase()
-        {% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ];
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results');
+    const resultsList = document.getElementById('results-list');
+    const blogContent = document.getElementById('blog-content');
+    const categoryLinks = document.querySelectorAll('.category-link');
+  
+    function performSearch(searchTerm) {
+      const term = searchTerm.toLowerCase();
       
-      if (postTitle.includes(term) || postCategories.some(cat => cat.includes(term))) {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
-          <small>Categories: {{ post.categories | join: ", " }}</small>
-        `;
-        resultsList.appendChild(li);
+      blogContent.style.display = 'none';
+      searchResults.style.display = 'block';
+      
+      resultsList.innerHTML = '';
+      
+      {% for post in site.posts %}
+        const postTitle = "{{ post.title | escape }}".toLowerCase();
+        const postCategories = [
+          {% for category in post.categories %}
+            "{{ category | escape }}".toLowerCase()
+          {% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ];
+        
+        if (postTitle.includes(term) || postCategories.some(cat => cat.includes(term))) {
+          const li = document.createElement('li');
+          li.className = "post-item {% if post.image %}has-image{% endif %}";
+          {% if post.image %}
+          li.style.backgroundImage = "url('{{ post.image }}')";
+          {% endif %}
+          
+          li.innerHTML = `
+            <div class="post-content">
+              <h2>
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              </h2>
+              <div class="post-meta">
+                <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                {% if post.categories.size > 0 %}
+                  <span class="post-categories">
+                    | Categories:
+                    {% for category in post.categories %}
+                    <a href="#" class="category-link" data-category="{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                  </span>
+                {% endif %}
+              </div>
+              <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+            </div>
+          `;
+          resultsList.appendChild(li);
+        }
+      {% endfor %}
+      
+      if (resultsList.children.length === 0) {
+        resultsList.innerHTML = '<li>No results found.</li>';
       }
-    {% endfor %}
-    
-    // Display a message if no results found
-    if (resultsList.children.length === 0) {
-      resultsList.innerHTML = '<li>No results found.</li>';
     }
-  }
-
-  // Add event listeners
-  searchButton.addEventListener('click', function() {
-    performSearch(searchInput.value);
-  });
-
-  searchInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
+  
+    searchButton.addEventListener('click', function() {
       performSearch(searchInput.value);
-    }
-  });
-
-  categoryLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const category = link.dataset.category;
-      searchInput.placeholder = `Search posts in ${category}`;
-      performSearch(category);
     });
+  
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        performSearch(searchInput.value);
+      }
+    });
+  
+    categoryLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const category = link.dataset.category;
+        searchInput.value = category;
+        searchInput.placeholder = `Search posts in ${category}`;
+        performSearch(category);
+      });
+    });
+  
+    const returnButton = document.createElement('button');
+    returnButton.textContent = 'Return to Blog';
+    returnButton.id = 'return-button';
+    returnButton.addEventListener('click', function() {
+      searchResults.style.display = 'none';
+      blogContent.style.display = 'block';
+      searchInput.value = '';
+      searchInput.placeholder = 'Search posts...';
+    });
+    searchResults.insertBefore(returnButton, searchResults.firstChild);
   });
-
-  // Add a button to return to the main blog content
-  const returnButton = document.createElement('button');
-  returnButton.textContent = 'Return to Blog';
-  returnButton.addEventListener('click', function() {
-    searchResults.style.display = 'none';
-    blogContent.style.display = 'block';
-    searchInput.value = '';
-    searchInput.placeholder = 'Search posts...';
-  });
-  searchResults.insertBefore(returnButton, searchResults.firstChild);
-});
-</script>
+  </script>
