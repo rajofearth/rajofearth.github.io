@@ -32,13 +32,23 @@ description: "{description}"
 tags: [{tags}]
 permalink: /projects/{repo_name}/
 ---
+  <h1><a href="javascript:history.back()" class="back-btn"><--</a
+  >Projects</h1>
+  <nav style="justify-content: center; padding-top: 20px;">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/projects/">Projects</a>
+    <a href="/about.html">About</a>
+    <!-- Add other navigation links as needed -->
+  </nav>
+  
 """
     file_path = f"_projects/{repo_name}.md"
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(front_matter + "\n" + content)
 
 os.makedirs("_projects", exist_ok=True)
-repos = ["rajofearth.github.io", "yplayer", "audio_file_organizer"]
+repos = ["rajofearth.github.io", "yplayer", "audio_file_organizer","play-that-song","study-notes-hub"]
 
 for repo in repos:
     content = fetch_readme(repo)

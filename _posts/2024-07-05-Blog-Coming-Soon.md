@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Blogs Coming Soon!"
+title: "Renew Your Subscription"
 date: 2024-07-08
-image: "https://i.imgur.com/6R5V6Xz.jpg"
+image:
 description: "Welcome to my new blog! Here, I’ll be sharing my thoughts on science, space, and technology."
 categories: [General]
 ---
 
-Blog Coming Soon!
+Again ! Go Renew Your Subscription

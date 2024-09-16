@@ -5,6 +5,16 @@ description: "This repository contains a Python script for organizing audio file
 tags: [automation, music, organizer, python, python-script]
 permalink: /projects/audio_file_organizer/
 ---
+  <h1><a href="javascript:history.back()" class="back-btn"><--</a
+  >Projects</h1>
+  <nav style="justify-content: center; padding-top: 20px;">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/projects/">Projects</a>
+    <a href="/about.html">About</a>
+    <!-- Add other navigation links as needed -->
+  </nav>
+  
 
 # Audio Organizer
 

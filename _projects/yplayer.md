@@ -5,6 +5,16 @@ description: "YPlayer is a sleek, responsive web-based music player that lets us
 tags: [music, music-player, responsive-web-design, webapp]
 permalink: /projects/yplayer/
 ---
+  <h1><a href="javascript:history.back()" class="back-btn"><--</a
+  >Projects</h1>
+  <nav style="justify-content: center; padding-top: 20px;">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/projects/">Projects</a>
+    <a href="/about.html">About</a>
+    <!-- Add other navigation links as needed -->
+  </nav>
+  
 
 # YPlayer
 
