@@ -57,9 +57,9 @@ Take my grandmother, who I mentioned at the start. After our chat about robot ov
 
 As I wrap up this probably-too-long blog post (thanks for sticking with me!), I can't help but feel incredibly optimistic about where we're headed. Sure, we need to be thoughtful about privacy, data security, and ensuring these technologies benefit everyone equally. But the potential to solve some of humanity's biggest challenges – from climate change to healthcare access – is right at our fingertips.
 
-I'd love to hear your thoughts on all this! Have you had any personal experiences with AI technology? What excites or concerns you about these developments? Drop a comment below, or better yet, call in to my podcast – I'm always looking for interesting perspectives to share.
+I'd love to hear your thoughts on all this! Have you had any personal experiences with AI technology? What excites or concerns you about these developments? Drop a comment below, Mail Me!, or better yet, call in to my podcast – I'm always looking for interesting perspectives to share.
 
-And hey, if you enjoyed this deep dive into the world of AI, make sure to subscribe to *When AIs Talk*. Next week, I'm interviewing a scientist who's teaching AI to understand cat memes. Yes, really. It's going to be as hilarious and fascinating as it sounds!
+And hey, if you enjoyed this deep dive into the world of AI, make sure to subscribe to [When AIs Talk](https://open.spotify.com/show/7b9ghwWWWCKZEv4CVnsSa3).
 
 Until next time, stay curious and keep embracing the future! And remember, as my grandmother now likes to say, "AI isn't magic – it's just really smart math doing really helpful things." (I might have oversimplified it a bit for her, but you get the idea!)
 
