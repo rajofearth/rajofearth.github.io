@@ -65,7 +65,7 @@ Until next time, stay curious and keep embracing the future! And remember, as my
 
 ---
 
-*P.S. If you're wondering about that shoulder issue the Neko scan picked up – turns out I just needed to stop hunching over my laptop while editing podcasts. Sometimes the future of healthcare is just telling you to sit up straight!*
+*P.S. If you're wondering about that shoulder issue – turns out I just needed to stop hunching over my laptop while editing Studying. Sometimes the future of healthcare is just telling you to sit up straight!*
 
 ---
 
