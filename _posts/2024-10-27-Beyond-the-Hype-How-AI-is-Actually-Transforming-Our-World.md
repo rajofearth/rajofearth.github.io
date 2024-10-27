@@ -53,7 +53,7 @@ You know what's really struck me throughout all my research and conversations? H
 
 Take my grandmother, who I mentioned at the start. After our chat about robot overlords, I showed her how AI helps me transcribe my podcast episodes and even suggests topics for future shows. Now she thinks I'm some kind of tech wizard (I haven't corrected her on that), but more importantly, she understands that AI is just a tool – a really powerful one, but still just a tool.
 
-## What's Next? (Besides Flying Cars, Obviously)
+## What's Next? (Besides Flying Cars, Obviously Because They are already a thing)
 
 As I wrap up this probably-too-long blog post (thanks for sticking with me!), I can't help but feel incredibly optimistic about where we're headed. Sure, we need to be thoughtful about privacy, data security, and ensuring these technologies benefit everyone equally. But the potential to solve some of humanity's biggest challenges – from climate change to healthcare access – is right at our fingertips.
 
@@ -65,7 +65,7 @@ Until next time, stay curious and keep embracing the future! And remember, as my
 
 ---
 
-*P.S. If you're wondering about that shoulder issue – turns out I just needed to stop hunching over my laptop while editing Studying. Sometimes the future of healthcare is just telling you to sit up straight!*
+*P.S. If you're wondering about that shoulder issue – turns out I just needed to stop hunching over my laptop while Studying. Sometimes the future of healthcare is just telling you to sit up straight!*
 
 ---
 
