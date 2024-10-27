@@ -98,7 +98,9 @@ input{
   font-family: 'Courier New', monospace;
   box-sizing: border-box;
 }
-
+hr {
+  border: #0f0 1px solid;
+}
 button {
   background: #0f0;
   color: #001;
