@@ -47,7 +47,15 @@
     <link rel="manifest" href="public/img/site.webmanifest">
     <base href="https://rajofearth.github.io/">
     <link rel="stylesheet" href="public/css/style.css" />
-    {% include analytics.html %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NLFSS6MMV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7NLFSS6MMV');
+    </script>
     <style>
       /* Add this to your existing styles */
       .popup {
