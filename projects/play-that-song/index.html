@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play-that-song - Yxa Rex - A Personal Website Of YR</title>
+        <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rajofearth.github.io/projects/play-that-song/" />
+    <meta property="og:title" content="Play-that-song" />
+    <meta
+      property="og:description"
+      content=""
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rajofearth.github.io/projects/play-that-song/" />
+    <meta
+      property="twitter:title"
+      content=""
+    />
+    <meta
+      property="twitter:description"
+      content=""
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/rajofearth/rajofearth.github.io/main/public/img/Yxa%20Rex%20v2.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="manifest" href="/public/img/site.webmanifest">
+    <link rel="stylesheet" href="/public/css/project.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NLFSS6MMV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NLFSS6MMV');
+</script>
+</head>
+<body>
+  <div class="container">
+        <h1><a href="javascript:history.back()" class="back-btn">&lt;--</a>Projects</h1>
+<nav style="justify-content: center; padding-top: 20px;">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/projects/">Projects</a>
+    <a href="/about.html">About</a>
+    <!-- Add other navigation links as needed -->
+  </nav>
+
+<h1 id="play-that-song">Play That Song</h1>
+
+<p><strong>Play That Song</strong> is a terminal-based MP3 player built with Python, utilizing <code class="language-plaintext highlighter-rouge">pygame</code>, <code class="language-plaintext highlighter-rouge">curses</code>, and <code class="language-plaintext highlighter-rouge">mutagen</code>. It features keyboard controls for playback, volume adjustment, seeking within tracks, shuffle, repeat modes, and a customizable text-based interface. The player can display song metadata and switch between music directories during runtime. Installation instructions are provided for Linux, macOS, and Windows.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li><strong>Play, Pause, Stop</strong> your tracks with easy keyboard shortcuts.</li>
+  <li><strong>Repeat Modes:</strong> Repeat a single track, repeat the entire playlist, or turn off repeat.</li>
+  <li><strong>Shuffle Mode:</strong> Shuffle your playlist to play songs randomly.</li>
+  <li><strong>Seek Functionality:</strong> Move forward or backward within the track using arrow keys.</li>
+  <li><strong>Volume Control:</strong> Adjust the volume using up and down arrows.</li>
+  <li><strong>Change Music Folder:</strong> Quickly switch between different music directories from within the player.</li>
+  <li><strong>Displays Song Metadata:</strong> See the currently playing song’s title, artist, and album.</li>
+  <li><strong>Customizable Playlist View:</strong> Browse through your playlist with the current track highlighted.</li>
+  <li><strong>Curses Interface:</strong> A retro text-based interface that runs right in your terminal.</li>
+</ul>
+
+<h2 id="screenshots">Screenshots</h2>
+<p><em>Home Page</em>
+<img src="https://github.com/user-attachments/assets/053576e7-b887-430c-b0f5-482883f01bcf" alt="image" />
+<em>Folder Change</em>
+<img src="https://github.com/user-attachments/assets/a5051130-2969-462a-ad76-064f2af49a57" alt="image" /></p>
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+  <li><strong>Clone the repository:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/rajofearth/play-that-song.git
+ <span class="nb">cd </span>play-that-song
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Install the required dependencies:</strong></p>
+
+    <ul>
+      <li><strong>For Linux/macOS:</strong>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+pip <span class="nb">install </span>curses
+</code></pre></div>        </div>
+      </li>
+      <li><strong>For Windows:</strong>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+pip <span class="nb">install </span>windows-curses
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Run the player:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> python play_that_song.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="controls">Controls</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>P</strong></td>
+      <td>Play/Pause the current track</td>
+    </tr>
+    <tr>
+      <td><strong>S</strong></td>
+      <td>Stop the track</td>
+    </tr>
+    <tr>
+      <td><strong>R</strong></td>
+      <td>Toggle repeat mode (Off/One/All)</td>
+    </tr>
+    <tr>
+      <td><strong>H</strong></td>
+      <td>Toggle shuffle mode</td>
+    </tr>
+    <tr>
+      <td><strong>N</strong></td>
+      <td>Play the next track</td>
+    </tr>
+    <tr>
+      <td><strong>B</strong></td>
+      <td>Play the previous track</td>
+    </tr>
+    <tr>
+      <td><strong>← / →</strong></td>
+      <td>Seek backward/forward in track</td>
+    </tr>
+    <tr>
+      <td><strong>↑ / ↓</strong></td>
+      <td>Increase/Decrease volume</td>
+    </tr>
+    <tr>
+      <td><strong>F</strong></td>
+      <td>Change music folder</td>
+    </tr>
+    <tr>
+      <td><strong>ESC</strong></td>
+      <td>Cancel folder change</td>
+    </tr>
+    <tr>
+      <td><strong>Q</strong></td>
+      <td>Quit the player</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="changing-the-music-folder">Changing the Music Folder</h3>
+
+<ol>
+  <li>Press <strong>F</strong> to change the music folder.</li>
+  <li>Type the path to your music folder (e.g., <code class="language-plaintext highlighter-rouge">~/Music/</code>).</li>
+  <li>Press <strong>Enter</strong> to load the new folder or <strong>ESC</strong> to cancel.</li>
+</ol>
+
+<h3 id="default-music-folder">Default Music Folder</h3>
+
+<ul>
+  <li>The player starts with a default music folder. You can set this path in the code or change it during runtime using the <strong>F</strong> key.</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions are welcome! Feel free to submit issues, feature requests, or pull requests to improve this project.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<ul>
+  <li>Built using <a href="https://www.pygame.org/">pygame</a> for audio handling.</li>
+  <li><a href="https://docs.python.org/3/library/curses.html">curses</a> for the text-based terminal interface.</li>
+  <li><a href="https://mutagen.readthedocs.io/en/latest/">mutagen</a> for reading MP3 metadata.</li>
+  <li>Special thanks to the Python and open-source community for making such projects possible.</li>
+</ul>
+
+<h2 id="contact">Contact</h2>
+
+<p>For any questions, suggestions, or feedback, please reach out via <a href="https://github.com/rajofearth/play-that-song/issues">GitHub Issues</a>.</p>
+
+    </div>
+</body>
+</html>
